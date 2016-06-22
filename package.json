@@ -1,7 +1,7 @@
 {
-  "name": "gulp-cli",
-  "version": "1.2.1",
-  "description": "Command line interface for gulp",
+  "name": "Prov LMS",
+  "version": "3.1.1",
+  "description": "Prov LMS app",
   "author": "Gulp Team <team@gulpjs.com> (http://gulpjs.com/)",
   "contributors": [],
   "homepage": "http://gulpjs.com",
