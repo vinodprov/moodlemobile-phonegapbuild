@@ -283,29 +283,28 @@ var license = '' +
     'ru.json', 'sv.json', 'tr.json', 'zh-cn.json', 'zh-tw.json'];
 
 var paths = {
-  build: './www/build',
+  build: './build',
   js: [
-    './www/app.js',
-    './www/core/main.js',
-    './www/core/lib/*.js',
-    './www/core/filters/*.js',
-    './www/core/directives/*.js',
-    './www/core/components/**/main.js',
-    './www/core/components/**/*.js',
-    './www/addons/**/main.js',
-    './www/addons/**/*.js',
-    '!./www/**/tests/*.js',
-    '!./www/**/e2e/*.js',
-    '!./www/**/' + remoteAddonPackageFolder + '/*.js',
-    '!./www/**/' + remoteAddonPackageFolder + '/**/*.js',
+    './app.js',
+    './core/main.js',
+    './core/lib/*.js',
+    './core/filters/*.js',
+    './core/directives/*.js',
+    './core/components/**/main.js',
+    './core/components/**/*.js',
+    './addons/**/main.js',
+    './addons/**/*.js',
+    '!./**/tests/*.js',
+    '!/**/' + remoteAddonPackageFolder + '/*.js',
+    '!./**/' + remoteAddonPackageFolder + '/**/*.js',
   ],
   sass: {
     core: [
-      './www/core/scss/*.scss',
-      './www/core/components/**/scss/*.scss',
-      './www/addons/**/scss/*.scss',
-      '!./www/**/' + remoteAddonPackageFolder + '/*.scss',
-      '!./www/**/' + remoteAddonPackageFolder + '/**/*.scss',
+      './core/scss/*.scss',
+      './core/components/**/scss/*.scss',
+      './addons/**/scss/*.scss',
+      '!./**/' + remoteAddonPackageFolder + '/*.scss',
+      '!./**/' + remoteAddonPackageFolder + '/**/*.scss',
     ],
     custom: [
       './scss/app.scss',
@@ -313,26 +312,15 @@ var paths = {
     ]
   },
   lang: [
-    './www/core/lang/',
-    './www/core/components/**/lang/',
-    './www/addons/**/lang/',
-    './www/core/assets/countries/',
-    '!./www/**/' + remoteAddonPackageFolder + '/*.json',
-    '!./www/**/' + remoteAddonPackageFolder + '/**/*.json',
+    './core/lang/',
+    './core/components/**/lang/',
+    './addons/**/lang/',
+    './core/assets/countries/',
+    '!./**/' + remoteAddonPackageFolder + '/*.json',
+    '!./**/' + remoteAddonPackageFolder + '/**/*.json',
   ],
-  config: './www/config.json',
-  e2e: {
-    build: './e2e/build',
-    buildToRoot: '../../',
-    libs: [
-      './e2e/*.js'
-    ],
-    plugins: './e2e/plugins',
-    pluginsToRoot: '../../',
-    specs: [
-      './www/**/e2e/*.spec.js'
-    ]
-  }
+  config: './config.json',
+ 
 };
 
 var remoteAddonPaths = {
@@ -436,13 +424,13 @@ gulp.task('e2e-build', function() {
     })
     .option('site-url', {
       alias: 'U',
-      default: 'http://school.demo.moodle.net',
-      describe: 'The URL of the site targetted by the tests'
+      default: 'https://www.proventuresindia.com',
+      describe: 'Prov LMS app'
     })
     .option('site-version', {
       alias: 'V',
-      default: 2.9,
-      describe: 'The version of the site targetted by the tests (2.8, 2.9, ...)'
+      default: 3.1.1,
+      describe: '2014'
     })
     .option('site-uses-local-mobile', {
       alias: 'L',
@@ -551,18 +539,6 @@ gulp.task('e2e-build', function() {
       configStr,
       onPrepare,
       users = {
-        STUDENT: {
-          LOGIN: 'student',
-          PASSWORD: 'moodle'
-        },
-        TEACHER: {
-          LOGIN: 'teacher',
-          PASSWORD: 'moodle'
-        },
-        ADMIN: {
-          LOGIN: 'admin',
-          PASSWORD: 'test'
-        }
       };
 
   // Preparing specs.
