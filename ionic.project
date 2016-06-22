@@ -1,0 +1,15 @@
+{
+  "name": "Prov LMS",
+  "app_id": "com.moodle.moodlemobile",
+  "gulpStartupTasks": [
+    "build",
+    "sass",
+    "watch",
+    "lang",
+    "config"
+  ],
+  "watchPatterns": [
+    "**/*",
+    "!lib/**/*"
+  ]
+}

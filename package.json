@@ -2,73 +2,80 @@
   "name": "Prov LMS",
   "version": "3.1.1",
   "description": "Prov LMS app",
-  "author": "Gulp Team <team@gulpjs.com> (http://gulpjs.com/)",
-  "contributors": [],
-  "homepage": "http://gulpjs.com",
-  "repository": "gulpjs/gulp-cli",
-  "license": "MIT",
-  "man": "gulp.1",
-  "engines": {
-    "node": ">= 0.10"
-  },
-  "main": "index.js",
-  "bin": {
-    "gulp": "bin/gulp.js"
-  },
-  "files": [
-    "index.js",
-    "lib",
-    "bin",
-    "completion",
-    "gulp.1"
-  ],
-  "scripts": {
-    "coveralls": "lab -r lcov | coveralls",
-    "lint": "eslint . && jscs index.js bin/ lib/ test/",
-    "prepublish": "marked-man --name gulp docs/CLI.md > gulp.1",
-    "pretest": "npm run lint",
-    "test": "lab test/*.js -cv",
-    "changelog": "github-changes -o gulpjs -r gulp-cli -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
-  },
   "dependencies": {
-    "archy": "^1.0.0",
-    "chalk": "^1.1.0",
-    "fancy-log": "^1.1.0",
-    "gulplog": "^1.0.0",
-    "interpret": "^1.0.0",
-    "liftoff": "^2.1.0",
-    "lodash.sortby": "^4.0.1",
-    "matchdep": "^1.0.0",
-    "mute-stdout": "^1.0.0",
-    "pretty-hrtime": "^1.0.0",
-    "semver-greatest-satisfied-range": "^1.0.0",
-    "tildify": "^1.0.0",
-    "v8flags": "^2.0.9",
-    "wreck": "^6.3.0",
-    "yargs": "^3.28.0"
+    "gulp": "^3.5.6",
+    "gulp-sass": "^1.3.3",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.5.0",
-    "babel-register": "^6.5.1",
-    "code": "^1.2.1",
-    "coveralls": "^2.7.0",
-    "eslint": "^1.7.3",
-    "eslint-config-gulp": "^2.0.0",
-    "fs-extra": "^0.26.1",
-    "github-changes": "^1.0.1",
-    "gulp": "gulpjs/gulp#4.0",
-    "jscs": "^2.3.5",
-    "jscs-preset-gulp": "^1.0.0",
-    "lab": "^6.2.0",
-    "marked-man": "^0.1.3"
+    "appium": "^1.4.11",
+    "bower": "^1.3.3",
+    "gulp-clip-empty-files": "^0.1.1",
+    "gulp-concat-util": "^0.5.2",
+    "gulp-file": "^0.2.0",
+    "gulp-insert": "^0.4.0",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-remove-empty-lines": "0.0.2",
+    "gulp-slash": "^1.1.3",
+    "gulp-strip-comments": "^1.0.1",
+    "gulp-tap": "^0.1.3",
+    "gulp-util": "^2.2.14",
+    "gulp-zip": "^3.2.0",
+    "jasmine": "^2.2.1",
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.5",
+    "plist": "^1.1.0",
+    "protractor": "^2.2.0",
+    "shelljs": "^0.3.0",
+    "through": "^2.3.6",
+    "wd": "^0.4.0",
+    "wd-bridge": "0.0.2",
+    "yargs": "^3.25.0"
   },
-  "keywords": [
-    "build",
-    "stream",
-    "system",
-    "make",
-    "tool",
-    "asset",
-    "pipeline"
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-globalization",
+    "cordova-plugin-file",
+    "cordova-plugin-inappbrowser",
+    "cordova-plugin-file-transfer",
+    "cordova-plugin-network-information",
+    "cordova-plugin-camera",
+    "cordova-plugin-media-capture",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-whitelist",
+    {
+      "locator": "https://github.com/Tunts/WebIntent",
+      "id": "net.tunts.webintent"
+    },
+    {
+      "variables": {
+        "URL_SCHEME": "moodlemobile"
+      },
+      "locator": "cordova-plugin-customurlscheme",
+      "id": "cordova-plugin-customurlscheme"
+    },
+    "ionic-plugin-keyboard",
+    {
+      "locator": "https://github.com/ti8m/DocumentHandler",
+      "id": "ch.ti8m.documenthandler"
+    },
+    "de.appplant.cordova.plugin.local-notification",
+    "cordova-plugin-zip",
+    {
+      "variables": {
+        "SENDER_ID": "694767596569"
+      },
+      "locator": "phonegap-plugin-push",
+      "id": "phonegap-plugin-push"
+    }
+  ],
+  "cordovaPlatforms": [
+    "ios",
+    "android"
   ]
 }
