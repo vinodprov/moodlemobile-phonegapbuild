@@ -5,7 +5,7 @@
         id        = "com.moodle.moodlemobile"
         versionCode = "2013"
         version   = "3.1.1">
-    <name>Prov LMS</name>
+    <name>ProvLMS</name>
 
     <description>
         Prov LMS app
@@ -117,6 +117,7 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
 
+    
     <gap:plugin name="net.tunts.webintent" />
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
         <param name="URL_SCHEME" value="moodlemobile" />
